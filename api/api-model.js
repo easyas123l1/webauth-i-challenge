@@ -18,6 +18,7 @@ function getUserId(id) {
 }
 
 function addUser(data) {
+  console.log(data);
   return db("users")
     .insert(data, "id")
     .then(ids => {
