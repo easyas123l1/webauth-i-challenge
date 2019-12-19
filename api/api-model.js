@@ -18,7 +18,6 @@ function getUserId(id) {
 }
 
 function addUser(data) {
-  console.log(data);
   return db("users")
     .insert(data, "id")
     .then(ids => {
@@ -29,8 +28,6 @@ function addUser(data) {
 }
 
 function findBy(username) {
-  console.log(typeof username);
-  console.log(username);
   return db("users")
     .where("username", "=", username)
     .first();
